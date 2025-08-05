@@ -51,7 +51,7 @@ pipeline {
       
         snykSecurity(
           snykInstallation: 'snyk',
-          snykTokenId: 'mySnyk',
+          snykTokenId: 'snyk_api_token',
           failOnIssues: false
         )
       }
