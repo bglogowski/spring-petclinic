@@ -50,7 +50,7 @@ pipeline {
       steps {
       
         snykSecurity(
-          snykInstallation: 'snyk',
+          snykInstallation: '/var/lib/jenkins/tools/io.snyk.jenkins.tools.SnykInstallation/snyk/snyk-linux',
           snykTokenId: 'snyk_api_token',
           failOnIssues: false
         )
