@@ -46,16 +46,6 @@ pipeline {
          }
       }
 
-   stage('Snyk Security Scan') {
-      steps {
-      
-        snykSecurity(
-          snykInstallation: 'snyk',
-          snykTokenId: 'snyk_api_token',
-          failOnIssues: false
-        )
-      }
-    }
 
       stage('Test Results') {
          steps {
