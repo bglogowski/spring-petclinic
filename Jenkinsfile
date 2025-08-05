@@ -18,7 +18,7 @@ pipeline {
             echo 'Getting Private Repo'
             git(
                url: 'git@github.com:bglogowski/spring-petclinic.git',
-               credentialsId: 'bglogowski',
+               credentialsId: 'myKey',
                branch: 'main'
             )
 
