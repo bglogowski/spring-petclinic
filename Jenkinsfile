@@ -12,10 +12,6 @@ def filePropertiesPathAndName = "${JENKINS_HOME}/workspace/${env.JOB_NAME}/${fil
 pipeline {
    agent any
 
-   environment {
-                SNYK_TOKEN = credentials('snyk_api_token')
-  }
-
    stages {
       stage('Get Build Files') {
          steps {
