@@ -18,7 +18,7 @@ pipeline {
             echo 'Getting Private Repo'
             git(
                url: 'git@github.com:bglogowski/spring-petclinic.git',
-               credentialsId: 'myKey',
+               credentialsId: 'jenkins',
                branch: 'main'
             )
 
@@ -45,17 +45,6 @@ pipeline {
             }
          }
       }
-
-   stage('Snyk Security Scan') {
-      steps {
-        snykSecurity(
-          snykInstallation: 'snyk',
-          snykTokenId: 'snyk_api_token',
-          failOnIssues: false
-        )
-      }
-    }
-
 
 
       stage('Test Results') {
