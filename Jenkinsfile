@@ -32,14 +32,12 @@ pipeline {
          steps {
             script {
                // Run the maven build
+               // sh 'pwd'
+               // dir('./production')
                withEnv(["MVN_HOME=$mvnHome"])
                {
                   if (isUnix()) {
-                     sh '"$MVN_HOME/bin/mvn" package'
-                  }
-                  /* groovylint-disable-next-line NestedBlockDepth */
-                  else {
-                     bat(/"%MVN_HOME%\bin\mvn" spring-javaformat:apply  -Dmaven.test.failure.ignore clean package/)
+                     sh './mvnw package'
                   }
                }
             }
