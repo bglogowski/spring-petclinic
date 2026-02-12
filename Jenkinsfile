@@ -67,7 +67,7 @@ pipeline {
                pom = readMavenPom file: './pom.xml'
 
                // Find built artifact under target folder
-               filesByGlob = findFiles(glob: "target/*.${pom.packaging}")
+               def filesByGlob = findFiles(glob: "target/*.${pom.packaging}")
 
                // Print info from the artifact found. This is good for debuging purposes
                echo '*** Print information found'
